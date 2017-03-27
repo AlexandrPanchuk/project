@@ -3,9 +3,12 @@
 namespace Models;
 
 use Components\Db;
+use Models\Model;
 
-class Home {
+class Home extends Model {
 	
+	const TABLE = 'news';	
+		
 	// получаем текст с главно страницы
 	public function textIndex() 
 	{
@@ -14,6 +17,18 @@ class Home {
 
 		$text =  $dbh->resultExecute();
 		return $text;
-	}	
+	}
+
+
+	// последних 3 новости
+	public function lastNews(array $news)
+	{
+	    if (!empty($news)) {
+	    	return $lastNews = array_slice($news, -3);
+	    }
+	    return [];
+	}
+
+
 
 }

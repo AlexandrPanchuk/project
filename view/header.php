@@ -9,7 +9,7 @@
 <div id="mainmenu" >
 	<ul class="header">
 		<li><a href="/">Главная страница</a></li>
-		<li><a href="/category/gallery.php">Галерея</a></li>
+		<li><a href="/category/news.php">Новости</a></li>
 		<li><a href="/category/schedule.php">Расписание поездов</a></li>
 		<li><a href="/admin/admin.php">Админка</a></li>
 	</ul>

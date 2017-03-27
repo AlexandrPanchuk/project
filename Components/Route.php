@@ -20,6 +20,11 @@ class Route {
 		// создаем путь к кнотроллеру
 		$controller_name = __DIR__.'/../Controller/'.$controller_name;
 
+		if (strpos($controller_name, '?') !== false)
+		{
+			$controller_name = preg_replace('/\?.*/s', '', $controller_name);
+		}
+
 		if (file_exists($controller_name)) 
 		{
 			include $controller_name;

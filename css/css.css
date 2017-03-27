@@ -166,3 +166,12 @@ input[type="text"]:focus {
   float: left;
   display: inline-block;
 }
+
+
+.last-news {
+  margin: 10px;
+  /*float: left;*/
+  display: block;
+  width: 500px; 
+  border: 1px solid black;
+}
