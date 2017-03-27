@@ -3,13 +3,14 @@
 namespace Components;
 
 use PDO;
+use Components\Singleton;
 
-class Db {
+class Db extends Singleton {
 
 	protected $config;
 	protected $dbh;	
 
-	public function __construct() 
+	protected function __construct() 
 	{
 		include 'config.php';
 		$this->config = $db;
@@ -49,5 +50,5 @@ class Db {
 		return [];
 
 	}
-	
+
 }

@@ -9,7 +9,7 @@ class Schedule {
 	// вытянуть весь список расписания
 	public function allList()
 	{
-		$dbh = new Db;
+		$dbh = Db::instance();	
 		$dbh->execute("SELECT * FROM schedule");
 		return $dbh->resultExecute();
 	} 

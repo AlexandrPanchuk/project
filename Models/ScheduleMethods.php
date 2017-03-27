@@ -10,7 +10,7 @@ class ScheduleMethods {
 
 	public function __construct()
 	{
-		$this->dbh = new Db;
+		$this->dbh = Db::instance();
 	}
 
 	public function addItem() 

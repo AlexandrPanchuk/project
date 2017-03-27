@@ -12,7 +12,8 @@ class Home extends Model {
 	// получаем текст с главно страницы
 	public function textIndex() 
 	{
-		$dbh = new Db;
+		// $dbh = new Db;
+		$dbh = Db::instance();
 		$dbh->execute("SELECT * FROM seotext WHERE page = 'index.php' ");
 
 		$text =  $dbh->resultExecute();
