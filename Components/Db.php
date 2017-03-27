@@ -24,10 +24,10 @@ class Db {
 	}
 
 
-	public function execute(string $sql) 
+	public function execute(string $sql, $parameters = []) 
 	{
 		$dbs = $this->dbh->prepare($sql);
-		$return = $dbs->execute();
+		$return = $dbs->execute($parameters);
 		$this->db = $dbs->fetchAll(); 
 		return $return ;
 	}
