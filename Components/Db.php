@@ -3,9 +3,10 @@
 namespace Components;
 
 use PDO;
-use Components\Singleton;
+// use Components\Singleton;
 
-class Db extends Singleton {
+class Db {
+	use Singleton;
 
 	protected $config;
 	protected $dbh;	

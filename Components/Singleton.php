@@ -2,7 +2,7 @@
 
 namespace Components;
 
-abstract class Singleton 
+trait Singleton 
 {
 
 	protected static $instance;
