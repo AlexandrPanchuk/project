@@ -1,0 +1,168 @@
+body {
+	width: 90%;
+	margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin: auto;
+
+}
+
+*, *::after, *::before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+#mainmenu {
+background: #636363;
+position: relative;
+overflow:hidden;
+height:40px;
+margin:10px 0;
+}
+#mainmenu ul {
+list-style:none;
+margin:0;
+padding:0;
+position: relative;
+left:50%;
+float:left;
+font:14px Arial, Helvetica, sans-serif;
+height:40px
+}
+#mainmenu ul li {
+	color: white;
+	/*margin-top: 10px;*/
+	font-size: 17px;
+position:relative;
+left:-50%;
+float:left;
+/*margin:0 10px;*/
+height:40px;
+/*margin: 10px;*/
+}
+
+
+#mainmenu ul li a:hover {
+	color: #d4c1c1;
+}
+
+#mainmenu ul li a {
+color: #fff;
+display:block;
+text-decoration:none;
+padding:0 15px;
+line-height: 40px;
+}
+#mainmenu ul li a:hover {
+background-color:#666; 
+}
+
+h1 {
+	margin: 10px 10px 10px ;
+}
+
+.seo-text {
+	margin: 10px;
+}
+
+table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  border-collapse: collapse;
+  color: #686461;
+}
+caption {
+  padding: 10px;
+  color: white;
+  background: #8FD4C1;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+}
+th {
+  border-bottom: 3px solid #B9B29F;
+  padding: 10px;
+  text-align: left;
+}
+td {
+  padding: 10px;
+}
+tr:nth-child(odd) {
+  background: white;
+}
+tr:nth-child(even) {
+  background: #E8E6D1;
+}
+
+
+.admin-view {
+  float: left;
+  width: 40%;
+}
+
+.right-table {
+  float: left;
+  width: 60%;
+  border-left: 1px solid #E8E6D1;
+  margin-top: 10px;
+}
+
+.table-admin {
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+   border: 1px solid #cccccc; //цвет рамки
+   border-radius: 3px; //закругление углов (общее)
+   -webkit-border-radius: 3px; //закругление углов (Google Chrome)
+   -moz-border-radius: 3px; //закругление углов (FireFox)
+   -khtml-border-radius: 3px; //закругление углов (Safari)
+   background: #ffffff !important; // желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым
+   outline: none; // удаляет обводку в браузерах хром(желтая) и сафари(синяя)
+   height: 24px; // высота на свое усмотрение
+   width: 120px; // ширина на свое усмотрение
+   color: #cccccc; //цвет шрифта в обычном состоянии
+   font-size: 11px; // Размер шрифта
+   font-family: Tahoma; // Стиль шрифта
+}
+input[type="text"]:focus {
+  color: #000000;
+  border: 1px solid #000000
+}
+
+
+#box div {
+  width: 40%;
+  float: left;
+  margin-top:5px;
+}
+
+
+.shedule-table-item {
+  width: 100%;
+  /*text-align: center;*/
+}
+
+
+.main-text {
+  display: inline-block;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.main-text .text {
+  width: 50%;
+  display: inline-block;
+}
+.main-text .text-new {
+  width: 50%;
+  float: left;
+  display: inline-block;
+}
