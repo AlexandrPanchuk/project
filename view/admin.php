@@ -36,7 +36,7 @@
 				</tr>
 				
 				<?php 
-				foreach ($data['schedule'] as $key => $value) 
+				foreach ($this->scheduleList as $key => $value) 
 				{
 					echo '<tr>';
 					echo '<td>'.$value['from'].'</td>';

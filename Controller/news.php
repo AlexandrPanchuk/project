@@ -1,12 +1,8 @@
 <?php
 
-
-$allNews = Models\News\News::findAll();
-
 $view = new Components\View();
+// $view->assign('news', $allNews);
 
-$view->assign('news', $allNews);
-
-
+$view->news = Models\News\News::findAll(); 
 
 $view->display(__DIR__.'/../view/news.php');

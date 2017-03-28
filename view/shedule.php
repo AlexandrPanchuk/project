@@ -12,7 +12,7 @@
 		</tr>
 		
 		<?php 
-		foreach ($data['schedule'] as $key => $value) 
+		foreach ($this->schedule as $key => $value) 
 		{
 			echo "<tr>";
 			echo "<td>".$value['from']."</td>";

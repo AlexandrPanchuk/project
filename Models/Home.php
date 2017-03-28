@@ -9,7 +9,9 @@ class Home extends Model {
 	
 	const TABLE = 'news';	
 		
-	// получаем текст с главно страницы
+	/*
+	*  получаем текст с главно страницы
+	*/
 	public function textIndex() 
 	{
 		// $dbh = new Db;
@@ -20,8 +22,9 @@ class Home extends Model {
 		return $text;
 	}
 
-
-	// последних 3 новости
+	/*
+	* последних 3 новости
+	*/
 	public function lastNews(array $news)
 	{
 	    if (!empty($news)) {

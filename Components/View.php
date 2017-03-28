@@ -7,6 +7,22 @@ class View {
 	public $name;	
 	public $value;
 
+
+	/* запись свойств на лету */
+	protected $data = [];
+
+	public function __set($k, $v)
+	{
+		$this->data[$k] = $v;	
+	}
+
+	public function __get($k)
+	{
+		return $this->data[$k]; 
+	}
+	/* !запись свойств на лету */
+
+
 	public function assign(string $name, array $value) 
 	{
 
@@ -17,13 +33,12 @@ class View {
 
 		$tmp = $value;
 	}
-
+	
 
 	public function display($template) 
 	{
 		if (file_exists($template))
 		{
-
 			$data = $this->val;		
 			include $template;
 		}
