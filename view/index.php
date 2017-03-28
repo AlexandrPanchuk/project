@@ -2,10 +2,10 @@
 <hr>
 <div class="seo-text">
 
-<?php echo $this->text[0]['text']; ?>
+<?php echo $text[0]['text']; ?>
 	<br>
 	<h3>Последние новости:</h3>
-	<?php foreach ($this->lastNews as  $value) { ?>
+	<?php foreach ($lastNews as  $value) { ?>
 		<div class="last-newss">
 		<p><a href="/news/article.php?news=<?php echo $value->id; ?>"><?php echo $value->title; ?></a></p>	
 		<hr>	
