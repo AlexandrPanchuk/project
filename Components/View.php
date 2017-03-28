@@ -7,7 +7,6 @@ class View {
 	public $name;	
 	public $value;
 
-
 	/* запись свойств на лету */
 	protected $data = [];
 
@@ -20,7 +19,14 @@ class View {
 	{
 		return $this->data[$k]; 
 	}
+
+	public function __isset($k) 
+    {
+        return isset($this->data[$k]);
+    }
 	/* !запись свойств на лету */
+
+
 
 
 	/*
@@ -58,6 +64,12 @@ class View {
 	{
 		echo $this->render($template);
 	}
+
+	public function generate_h1($html)
+	{
+
+	}
+
 
 
 

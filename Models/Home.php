@@ -8,7 +8,38 @@ use Models\Model;
 class Home extends Model {
 	
 	const TABLE = 'news';	
-		
+
+	/*
+	* lazy load
+	* делаем запрос к базе на получение связанной модели	
+	* тогда, когда они нужны
+	*/
+
+	/*
+	* Примечание: используется еще в Models\News\News.php
+	* можно сделать для него трейт
+	*/
+	public function __get($k)
+	{
+		switch ($k) {
+			case 'author':
+				return Author::findById($this->author_id);		
+				break;
+			default:
+				return NULL;
+		}
+	}
+
+	public function __isset($k)
+	{
+		switch ($k) {
+			case 'author':
+				return !empty($this->author_id);
+			default:
+				return false;
+		}
+	}		
+
 	/*
 	*  получаем текст с главно страницы
 	*/

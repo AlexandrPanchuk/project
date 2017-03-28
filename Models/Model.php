@@ -14,8 +14,17 @@ abstract class Model {
 	public static function findAll()
 	{
 		$db = Db::instance();
-		return $db->query('SELECT * FROM '. static::TABLE, static::CLASS);
+		return $db->query('SELECT * FROM '. static::TABLE, [], static::CLASS);
 	}
+
+	public static function findById($id)
+	{
+ 		$db = Db::instance();
+		return $db->query('SELECT * FROM '. static::TABLE . ' WHERE id=:id ',
+		[':id' => $id],	
+		 static::class)[0];
+	}
+
 
 	
 	public function isNew()

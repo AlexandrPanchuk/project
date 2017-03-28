@@ -3,11 +3,42 @@
 namespace Models\News;
 
 use Models\Model;
+use Models\Author;
 use Components\Db;
 use Components\Singleton;
 
 class News extends Model {
 	const TABLE = 'news';
+
+	public $title;
+	public $lead;
+	public $author_id;
+	
+	/*
+	* lazy load
+	* делаем запрос к базе на получение связанной модели	
+	* тогда, когда они нужны
+	*/
+	public function __get($k)
+	{
+		switch ($k) {
+			case 'author':
+				return Author::findById($this->author_id);		
+				break;
+			default:
+				return NULL;
+		}
+	}
+
+	public function __isset($k)
+	{
+		switch ($k) {
+			case 'author':
+				return !empty($this->author_id);
+			default:
+				return false;
+		}
+	}
 
 	/*
 	* Метод возвращает новость
@@ -27,4 +58,11 @@ class News extends Model {
 
 		}
 	}
+
+
+
+
+
+
+
 }
