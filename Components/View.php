@@ -23,6 +23,10 @@ class View {
 	/* !запись свойств на лету */
 
 
+	/*
+	* method
+	* @deprecated
+	*/
 	public function assign(string $name, array $value) 
 	{
 
@@ -33,17 +37,21 @@ class View {
 
 		$tmp = $value;
 	}
-	
+
+	public function render ($template)
+	{
+		ob_start();
+		include $template;
+		$content = ob_get_contents();
+		ob_end_clean();
+		return $content;
+	}
+
 
 	public function display($template) 
 	{
-		if (file_exists($template))
-		{
-			$data = $this->val;		
-			include $template;
-		}
+		echo $this->render($template);
 	}
-
 
 
 
