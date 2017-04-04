@@ -49,7 +49,7 @@ class News extends Model {
 		if (!empty($id))
 		{
 			$db = Db::instance();
-			$data = $db->query("SELECT * FROM news WHERE id = ".$id['news']." ", self::CLASS);
+			$data = $db->query("SELECT * FROM news WHERE id = ".$id['news']." ",[], self::CLASS);
 			if (!empty($data))
 			{
 				return $data;

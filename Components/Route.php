@@ -1,5 +1,6 @@
 <?php 
 
+
 class Route {
 
 	public $uri;
@@ -31,7 +32,11 @@ class Route {
 		} 
 		else 
 		{
-			Route::ErrorPage();
+			/*
+			* Исключение ловим в индексе /index.php	
+			*/
+			$ex = new \Exceptions\Core('Страница не найдена!');
+			throw $ex;
 		}	
 		
 	}

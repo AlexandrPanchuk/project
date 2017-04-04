@@ -16,11 +16,16 @@ class Db {
 		include 'config.php';
 		$this->config = $db;
 
-		$this->dbh = new PDO(
-			'mysql:host='.$this->config['host'].';dbname='.$this->config['dbname'].';', 
-			$this->config['name'], 
-			$this->config['password'],
-			array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));  
+		try {
+			$this->dbh = new PDO(
+				'mysql:host='.$this->config['host'].';dbname='.$this->config['dbname'].';', 
+				$this->config['name'], 
+				$this->config['password'],
+				array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));  
+		} catch (\PDOException $ex) {
+			throw new \Exceptions\Db("Ошибка с подключением к базе данных: ".$ex->getMessage());
+			die();
+		}
 	}
 
 
