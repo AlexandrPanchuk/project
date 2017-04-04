@@ -19,7 +19,7 @@ class Route {
 		}
 
 		// создаем путь к кнотроллеру
-		$controller_name = __DIR__.'/../Controller/'.$controller_name;
+		$controller_name = __DIR__.'/../FrontController/'.$controller_name;
 
 		if (strpos($controller_name, '?') !== false)
 		{

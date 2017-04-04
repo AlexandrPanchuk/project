@@ -7,7 +7,7 @@
 	<h3>Последние новости:</h3>
 	<?php foreach ($lastNews as  $value) { ?>
 		<div class="last-newss">
-		<p><a href="/news/article.php?news=<?php echo $value->id; ?>"><?php echo $value->title; ?></a></p>	
+		<p><a href="/news/news.php?action=One&news=<?php echo $value->id; ?>"><?php echo $value->title; ?></a></p>	
 			
 		<?php if (!empty($value->author)): ?>
 			Aвтор: <?php echo $value->author->name; ?>	
